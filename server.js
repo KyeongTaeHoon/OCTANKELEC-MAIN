@@ -2,10 +2,7 @@ const db_config = require(__dirname + '/database.js');
 const express = require('express');
 const app = express();
 var AWS = require ('aws-sdk');
-
-AWS.config = new AWS.Config();
 AWS.config.update({region:'ap-northeast-2'});
-
 const bodyParser = require('body-parser');
 const personalizeruntime = new AWS.PersonalizeRuntime();
 const personalizeevents = new AWS.PersonalizeEvents();
